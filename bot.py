@@ -48,7 +48,7 @@ async def handle_suggestion(message: types.Message):
     for admin_id in ADMINS:
         try:
             if message.text:
-                await bot.send_message(admin_id, f"📥 **Новое предложение:**\n\n{message.text}", reply_markup=kb)
+                await bot.send_message(admin_id,  :**\n\n{message.text}", reply_markup=kb)
             elif message.photo:
                 await bot.send_photo(admin_id, message.photo[-1].file_id, caption=f"📥 **Новое фото:**\n{message.caption or ''}", reply_markup=kb)
         except Exception as e:
